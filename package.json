@@ -1,0 +1,63 @@
+{
+  "name": "upcheck",
+  "version": "0.1.0",
+  "description": "Check that your URLs are up: status, response time, TLS expiry and keyword matches. Table or JSON output, CI-friendly exit codes.",
+  "keywords": [
+    "uptime",
+    "monitoring",
+    "healthcheck",
+    "status",
+    "tls",
+    "ssl",
+    "cli",
+    "github-action"
+  ],
+  "license": "MIT",
+  "author": "Dex",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtxdex1020/upcheck.git"
+  },
+  "homepage": "https://github.com/dtxdex1020/upcheck#readme",
+  "type": "module",
+  "bin": {
+    "upcheck": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "lint": "eslint . && prettier --check . && tsc --noEmit",
+    "format": "prettier --write .",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "picocolors": "^1.1.1",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^20.19.43",
+    "eslint": "^9.39.5",
+    "globals": "^16.5.0",
+    "prettier": "^3.9.9",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.71.1",
+    "vitest": "^3.2.7"
+  }
+}
