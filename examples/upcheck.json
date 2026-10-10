@@ -1,0 +1,6 @@
+{
+  "checks": [
+    { "url": "https://example.com", "keyword": "Example Domain" },
+    { "url": "https://github.com", "method": "HEAD" }
+  ]
+}

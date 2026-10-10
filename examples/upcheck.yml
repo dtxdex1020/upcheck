@@ -1,0 +1,13 @@
+# upcheck --config examples/upcheck.yml
+defaults:
+  timeout: 8000
+  minTlsDays: 14
+
+checks:
+  - https://example.com
+  - name: GitHub
+    url: https://github.com
+    keyword: GitHub
+  - name: API health
+    url: https://api.github.com/zen
+    expectStatus: [200]
